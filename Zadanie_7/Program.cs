@@ -11,10 +11,12 @@ namespace Zadanie_7
         static async Task Main(string[] args)
         {
             HttpListener server = new HttpListener();
+            // Эту штучку потом открываем
             server.Prefixes.Add("http://127.0.0.1:8888/connection/");
             server.Start();
 
-            Console.WriteLine("Прослушивание");
+            // Подслушивать не хорошо!
+            Console.WriteLine("Подключение");
 
             while (true)
             {
